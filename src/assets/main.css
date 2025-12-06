@@ -4,7 +4,8 @@
   padding: 0;
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
 }
@@ -12,4 +13,48 @@ html, body {
 #app {
   width: 100%;
   min-height: 100vh;
+}
+
+:root {
+  --color-bg-start: #f6d365;
+  --color-bg-end: #fda085;
+  --color-sidebar-start: #f6d365;
+  --color-sidebar-end: #fda085;
+  --color-text-primary: #1f2937;
+  --color-text-muted: #475569;
+  --color-header-bg: rgba(255, 255, 255, 0.55);
+  --color-header-border: rgba(17, 24, 39, 0.08);
+  --color-button-bg: rgba(17, 24, 39, 0.06);
+  --color-button-bg-hover: rgba(17, 24, 39, 0.1);
+  --color-hover-bg: rgba(17, 24, 39, 0.06);
+  --color-focus-ring: rgba(245, 158, 11, 0.5);
+}
+
+[data-theme='dark'] {
+  --color-bg-start: #0f172a;
+  --color-bg-end: #1f2937;
+  --color-sidebar-start: #1f2937;
+  --color-sidebar-end: #334155;
+  --color-text-primary: #f8fafc;
+  --color-text-muted: #cbd5e1;
+  --color-header-bg: rgba(15, 23, 42, 0.55);
+  --color-header-border: rgba(255, 255, 255, 0.12);
+  --color-button-bg: rgba(255, 255, 255, 0.08);
+  --color-button-bg-hover: rgba(255, 255, 255, 0.12);
+  --color-hover-bg: rgba(255, 255, 255, 0.1);
+  --color-focus-ring: rgba(245, 158, 11, 0.5);
+}
+
+body {
+  color: var(--color-text-primary);
+}
+
+a,
+button {
+  outline: none;
+}
+
+a:focus-visible,
+button:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
 }

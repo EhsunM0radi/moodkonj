@@ -121,19 +121,19 @@ watch(
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: linear-gradient(135deg, #f6d365 0%, #fda085 100%);
+  background: linear-gradient(135deg, var(--color-bg-start) 0%, var(--color-bg-end) 100%);
 }
 
 .topbar {
   position: sticky;
   top: 0;
-  margin: 10px;
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--color-header-bg);
   backdrop-filter: blur(12px) saturate(1.2);
   -webkit-backdrop-filter: blur(12px) saturate(1.2);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-  border-radius: 12px;
-  padding: 1rem 1.5rem;
+  border: 1px solid var(--color-header-border);
+  margin: 0.75rem 1rem;
+  border-radius: 16px;
+  padding: 0.75rem 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -152,7 +152,7 @@ watch(
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: white;
+  color: var(--color-text-primary);
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -163,8 +163,13 @@ watch(
 }
 
 .back-btn:hover {
-  background: rgba(255, 255, 255, 0.3);
-  transform: translateX(-2px);
+  background: var(--color-button-bg-hover);
+}
+.back-btn:active {
+  transform: scale(0.98);
+}
+.back-btn:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
 }
 
 .breadcrumbs {
@@ -174,7 +179,7 @@ watch(
 }
 
 .crumb {
-  color: white;
+  color: var(--color-text-primary);
   text-decoration: none;
   font-weight: 500;
   transition: opacity 0.3s ease;
@@ -188,7 +193,7 @@ watch(
   content: '/';
   margin-left: 0.3rem;
   margin-right: 0.3rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: var(--color-text-muted);
 }
 
 .crumb:last-child::after {
@@ -200,7 +205,7 @@ watch(
   border: none;
   font-size: 1.5rem;
   cursor: pointer;
-  color: white;
+  color: var(--color-text-primary);
   width: 45px;
   height: 45px;
   border-radius: 8px;
@@ -211,7 +216,10 @@ watch(
 }
 
 .hamburger:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: var(--color-button-bg-hover);
+}
+.hamburger:active {
+  transform: scale(0.98);
 }
 
 .sidebar {
@@ -220,7 +228,7 @@ watch(
   top: 0;
   width: 280px;
   height: 100%;
-  background: linear-gradient(180deg, #f6d365 0%, #fda085 100%);
+  background: linear-gradient(180deg, var(--color-sidebar-start) 0%, var(--color-sidebar-end) 100%);
   border-right: none;
   padding: 1rem 1rem;
   box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
@@ -258,7 +266,7 @@ watch(
 .close-btn {
   background: rgba(255, 255, 255, 0.2);
   border: none;
-  color: #fff;
+  color: var(--color-text-primary);
   font-size: 1.4rem;
   width: 36px;
   height: 36px;
@@ -270,6 +278,12 @@ watch(
   cursor: pointer;
   position: sticky;
   top: 0;
+}
+.close-btn:hover {
+  background: var(--color-button-bg-hover);
+}
+.close-btn:active {
+  transform: scale(0.98);
 }
 
 .icon {
@@ -283,7 +297,7 @@ watch(
   display: block;
   padding: 0.9rem 1rem;
   text-decoration: none;
-  color: white;
+  color: var(--color-text-primary);
   border-radius: 8px;
   margin-bottom: 0.5rem;
   font-weight: 500;
@@ -291,8 +305,13 @@ watch(
 }
 
 .item:hover {
-  background: rgba(255, 255, 255, 0.2);
-  transform: translateX(5px);
+  background: var(--color-hover-bg);
+}
+.item:active {
+  transform: scale(0.98);
+}
+.item:focus-visible {
+  box-shadow: 0 0 0 2px var(--color-focus-ring);
 }
 
 .slide-enter-from {
@@ -327,7 +346,7 @@ watch(
     height: 100vh;
     left: 0;
     top: 0;
-    padding: calc(1rem + env(safe-area-inset-top)) 1rem 1rem;
+    padding: calc(0.75rem + env(safe-area-inset-top)) 0.75rem 0.75rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -339,7 +358,7 @@ watch(
     position: sticky;
     top: 0;
     align-self: flex-start;
-    margin: 0.5rem 0.5rem 1rem 0;
+    margin: 0.5rem 0.5rem 0.75rem 0;
     z-index: 1;
   }
   .item {
@@ -347,16 +366,16 @@ watch(
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    width: min(440px, 90vw);
+    width: min(440px, 94vw);
     font-size: 1.05rem;
-    padding: 1.1rem 1rem;
+    padding: 1rem 0.9rem;
   }
   .item:hover {
     transform: none;
   }
   .icon {
     font-size: 1.2rem;
-    margin-left: 0.6rem;
+    margin-left: 0.5rem;
   }
 }
 </style>
