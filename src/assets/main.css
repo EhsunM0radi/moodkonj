@@ -28,6 +28,7 @@ body {
   --color-button-bg-hover: rgba(17, 24, 39, 0.1);
   --color-hover-bg: rgba(17, 24, 39, 0.06);
   --color-focus-ring: rgba(245, 158, 11, 0.5);
+  --font-sans: 'Vazir', 'Vazirmatn', 'Tahoma', 'Segoe UI', 'Arial', sans-serif;
 }
 
 [data-theme='dark'] {
@@ -47,6 +48,7 @@ body {
 
 body {
   color: var(--color-text-primary);
+  font-family: var(--font-sans);
 }
 
 a,
