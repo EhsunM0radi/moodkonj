@@ -18,7 +18,9 @@ import { computed } from 'vue'
 import { useThemeStore } from '@/stores/theme'
 
 const themeStore = useThemeStore()
+
 const isDark = computed(() => themeStore.theme === 'dark')
+
 const toggleTheme = () => themeStore.toggleTheme()
 </script>
 

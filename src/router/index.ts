@@ -5,7 +5,8 @@ import Home from '@/pages/HomePage.vue'
 import ChatIndex from '@/pages/Chats/ChatsIndex.vue'
 import ChatScreen from '@/pages/Chats/ChatScreen.vue'
 import CategoriesIndex from '@/pages/Meet/CategoriesIndex.vue'
-import GamesCategories from '@/pages/Games/CategoriesIndex.vue'
+import GamesCategories from '@/pages/Games/GamesIndex.vue'
+import SpinTheBottle from '@/pages/Games/SpinTheBottle.vue'
 import ProfilePage from '@/pages/ProfilePage.vue'
 import RecommendationsPage from '@/pages/RecommendationsPage.vue'
 import NotFoundPage from '@/pages/NotFoundPage.vue'
@@ -44,6 +45,11 @@ const router = createRouter({
           path: '/games',
           name: 'games',
           component: GamesCategories,
+        },
+        {
+          path: '/games/spin-the-bottle',
+          name: 'spin-the-bottle',
+          component: SpinTheBottle,
         },
         {
           path: '/profile',
